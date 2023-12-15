@@ -54,7 +54,7 @@ router.post('/createUser', [
         res.json({ authToken });
     } catch (error) {
         console.error(error.message);
-        res.status(500).send("Internal Server Error");
+        res.status(500).send("User Cannot be created");
     }
 
 
@@ -103,7 +103,7 @@ router.post('/login', [
         res.json({ authToken });
     } catch (error) {
         console.error(error.message);
-        res.status(500).send("Internal Server Error");
+        res.status(500).send("User cannot login");
     }
 })
 
@@ -119,7 +119,7 @@ router.post('/getUser', fetchUser , async (req, res) => {
 
     } catch (error) {
         console.error(error.message);
-        res.status(500).send("Internal Server Error");
+        res.status(500).send("Cant get user");
     }
 
 
